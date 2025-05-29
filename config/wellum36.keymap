@@ -15,5 +15,5 @@
                               &kp LBKT       &kp LBRC      &kp LPAR          &kp RPAR       &kp LBRC       &mo LBKT
             >;
         };
-    }
+    };
 };
