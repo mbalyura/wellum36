@@ -1,0 +1,31 @@
+/ {
+    compatible = "zmk,keyboard-shield";
+    description = "Test shield for direct GPIO scanning";
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-direct-gpio";
+        label = "TestDirect";
+
+        input-gpios = <&pro_micro 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.06
+                    , <&pro_micro 8  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.08
+                    , <&pro_micro 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.17
+                    , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.20
+                    , <&pro_micro 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.22
+                    , <&pro_micro 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.24
+                    , <&pro_micro 0  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.00
+                    , <&pro_micro 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.11
+                    , <&pro_micro 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.04
+                    , <&pro_micro 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.06
+                    , <&pro_micro 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.31
+                    , <&pro_micro 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.29
+                    , <&pro_micro 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.02
+                    , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.15
+                    , <&pro_micro 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.13
+                    , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.10
+                    , <&pro_micro 9  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.09
+                    , <&pro_micro 1  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.01
+                    , <&pro_micro 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.02 (SWDIO !)
+                    , <&pro_micro 7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.07 (SWCLK !)
+                    ;
+    };
+};
